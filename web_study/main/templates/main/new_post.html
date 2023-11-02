@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기 페이지</title>
+</head>
+<body>
+    <h1>글쓰기 페이지</h1>
+    <form method="POST"> <!-- form : 내부의 정보를 한번에 서버로 전송하는 역할-->
+        <!-- get방식 : 원하는 데이터를 서버에 요청해 정보를 가져오는 방식-->
+        <!-- post방식 : 정보를 서버에 전송하여 데이터베이스에 정보를 저장하는 방식-->
+        {% csrf_token %}
+        제목<br>
+        <input type = "text" name="postname"><br>
+        내용<br>
+        <textarea rows="10" cols="50" name = "contents"></textarea><br>
+        <input type="file" name="mainphoto"><br>
+        <input type="submit" value="글쓰기">
+    </form>
+</body>
+</html>
